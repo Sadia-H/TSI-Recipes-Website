@@ -6,4 +6,29 @@
     <title>Add your recipe</title>
 </head>
 
-<h1>Add Your Recipe</h1>
+<body>
+    <h1>Add Your Recipe</h1>
+    <form action="/recipeAdded">
+        <label for="recipeTitle">Title:</label><br>
+        <input type="text" id="recipeTitle" name="recipeTitle"><br>
+        
+        <label for="recipeIngredients">Ingredients:</label><br>
+        <input type="text" id="recipeIngredients" name="recipeIngredients"><br>
+        
+        <label for="recipeIntructions">Intructions:</label><br>
+        <input type="text" id="recipeIntructions" name="recipeIntructions"><br><br>
+        
+        <label for="recipeDifficulty">Difficulty:</label><br>
+       
+        <input type="radio" id="easy" name="easyDifficulty" value="easy">
+        <label for="easy">Easy</label>
+        <input type="radio" id="easy" name="easyDifficulty" value="medium">
+        <label for="medium">Medium</label>
+        <input type="radio" id="easy" name="easyDifficulty" value="hard">
+        <label for="hard">Hard</label>
+
+        <input type="submit" value="Submit">
+
+    </form>
+</body>
+
