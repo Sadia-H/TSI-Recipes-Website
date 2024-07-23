@@ -6,7 +6,89 @@
     <title>Add your recipe</title>
     <link rel="stylesheet" href="/Styling/add-recipe.css">
     <link rel="stylesheet" href="/Styling/navbar.css">
-    <script src="/JS/formScript.js"></script>
+    <!-- <script src="/JS/formScript.js"></script> -->
+   
+     <script>
+        function validateForm(event) {
+            event.preventDefault();
+
+            const title = document.getElementById('recipeTitle').value;
+            const ingredients = document.getElementById('recipeIngredients').value;
+            const recipeInstructions = document.getElementById('recipeInstructions').value;
+            const difficulty = document.querySelector('input[name="difficulty"]:checked');
+
+            if (title === "" || ingredients === "" || recipeInstructions === "" || !difficulty) {
+                alert("Please fill out all fields.");
+                return;
+            }
+
+            document.getElementById('myForm').submit();
+        }
+
+        window.onload = function() {
+            document.getElementById('myForm').addEventListener('submit', validateForm);
+        }
+    </script>
+
+     <!-- <script>
+        function validateForm(event) {
+            event.preventDefault();
+
+            document.querySelector('.error').forEach(span => span.textContent = '');
+
+            const title = document.getElementById('recipeTitle').value;
+            const ingredients = document.getElementById('recipeIngredients').value;
+            const recipeInstructions = document.getElementById('recipeInstructions').value;
+            const difficulty = document.querySelector('input[name="difficulty"]:checked');
+
+            // if (title === "") {
+            //     alert("Please enter the title.");
+            //     return;
+            // }
+            // if (ingredients === "") {
+            //     alert("Please enter the ingredients.");
+            //     return;
+            // }
+            if (title === "" || ingredients === "" || recipeInstructions === "" || !difficulty) {
+                alert("Please fill out all fields.");
+                return;
+            }
+
+        
+            document.getElementById('myForm').submit();
+        }
+
+        window.onload = function() {
+            document.getElementById('myForm').addEventListener('submit', validateForm);
+        }
+    </script> -->
+
+
+
+<!-- <script>
+    document.getElementById('myForm').addEventListener('submit', function(event) {
+        event.preventDefault();
+
+    
+        document.getElementById('titleError').textContent = '';
+
+      
+        const title = document.getElementById('recipeTitle').value;
+
+        
+        if (title === "") {
+
+            document.getElementById('titleError').textContent = "Please enter the field above";
+        } else {
+            
+            alert('Title is valid!');
+    
+        }
+    });
+</script> -->
+
+
+
 </head>
 
 <body>
@@ -21,7 +103,8 @@
     <h1>Add Your Recipe</h1>
     
     
-    <form action="/recipeAdded.html">
+    <!-- <form id='myForm' action="/recipeAdded.html"> -->
+    <form id='myForm'>
         <label for="recipeTitle">Title:</label>
         <input type="text" id="recipeTitle" name="recipeTitle">
         <span class="error" id="titleError"></span>
@@ -30,8 +113,8 @@
         <label for="recipeIngredients">Ingredients:</label>
         <input type="text" id="recipeIngredients" name="recipeIngredients">
         
-        <label for="recipeIntructions">Intructions:</label>
-        <input type="text" id="recipeIntructions" name="recipeIntructions">
+        <label for="recipeInstructions">Intructions:</label>
+        <input type="text" id="recipeInstructions" name="recipeInstructions">
         
         <label for="recipeDifficulty">Difficulty:</label>
         <div class="radio-group">
@@ -47,6 +130,6 @@
 
 
     </form>
-    
+    <div id="errorMessages"></div>
 </body>
 
