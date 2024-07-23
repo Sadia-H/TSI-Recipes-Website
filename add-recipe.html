@@ -24,7 +24,9 @@
     <form action="/recipeAdded.html">
         <label for="recipeTitle">Title:</label>
         <input type="text" id="recipeTitle" name="recipeTitle">
-        
+        <span class="error" id="titleError"></span>
+
+
         <label for="recipeIngredients">Ingredients:</label>
         <input type="text" id="recipeIngredients" name="recipeIngredients">
         
@@ -33,11 +35,11 @@
         
         <label for="recipeDifficulty">Difficulty:</label>
         <div class="radio-group">
-            <input type="radio" id="easy" name="easyDifficulty" value="easy">
+            <input type="radio" id="easy" name="difficulty" value="easy">
             <label for="easy">Easy</label>
-            <input type="radio" id="medium" name="mediumDifficulty" value="medium">
+            <input type="radio" id="medium" name="difficulty" value="medium">
             <label for="medium">Medium</label>
-            <input type="radio" id="hard" name="hardDifficulty" value="hard">
+            <input type="radio" id="hard" name="difficulty" value="hard">
             <label for="hard">Hard</label>
         </div>
 
