@@ -4,33 +4,50 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>View All Recipes</title>
+    <link rel="stylesheet" href="/Styling/view-recipes.css">
+    <link rel="stylesheet" href="/Styling/navbar.css">
+</head>
 </head>
 
 
 <body>
     <nav class="navigationBar">
-        <a href="index.html">Home</a>
-        <a href="view-recipes.html">View All Recipes</a>
-        <a href="add-recipe.html">Add Recipe</a>
+        <a class="logo" href="index.html">DESSERTS</a>
+        <div class="navigation-links">
+            <!-- <a href="index.html">Home</a> -->
+            <a href="view-recipes.html">All Recipes</a>
+            <a href="add-recipe.html">Add Recipe</a>
+        </div>
     </nav>
     <hr>
-   <h1>View All Recipes</h1>
+   <h1 id="page_heading">View All Recipes</h1>
    
 
    <div class="listedRecipes"> 
-        <a href="/Recipe Pages/brownies.html">
-            <p>Brownies</p>
-            <img src="Images/brownies_img.jpg" alt="Brownies image" width="150" height="150">
-        </a>
-        <p></p>
-        <a href="/Recipe Pages/chocolate-chip-cookies.html">
-            <p>Chocolate Chip Cookies</p>
-            <img src="Images/chocolate-chip-cookies.jpg" alt="Brownies image" width="150" height="150">
-        </a>
-        <a href="/Recipe Pages/red-velvet-cupcakes.html">
-            <p>Red Velvet Cupcakes</p>
-            <img src="Images/red-velvet-cupcakes.jpg" alt="Brownies image" width="150" height="200">
-        </a>
+    <div class="recipeItem">
+        <img src="Images/brownies_img.jpg" alt="Brownies image" class="recipeImage">
+        <div class="recipeInfo">
+            <h2>Brownies</h2>
+            <p>A rich and fudgy brownie recipe that will satisfy your chocolate cravings.</p>
+            <a class="continueReading" href="/Recipe Pages/brownies.html">Continue Reading</a>
+        </div>
+    </div>
+    <div class="recipeItem">
+        <img src="Images/chocolate-chip-cookies.jpg" alt="Chocolate Chip Cookies image" class="recipeImage">
+        <div class="recipeInfo">
+            <h2>Chocolate Chip Cookies</h2>
+            <p>Classic chocolate chip cookies with a crispy edge and chewy center.</p>
+            <a class="continueReading" href="/Recipe Pages/chocolate-chip-cookies.html">Continue Reading</a>
+        </div>
+    </div>
+    <div class="recipeItem">
+        <img src="Images/red-velvet-cupcakes-square.jpg" alt="Red Velvet Cupcakes image" class="recipeImage">
+        <div class="recipeInfo">
+            <h2>Red Velvet Cupcakes</h2>
+            <p>Delicious red velvet cupcakes topped with creamy cream cheese frosting.</p>
+            <a class="continueReading" href="/Recipe Pages/red-velvet-cupcakes.html">Continue Reading</a>
+        </div>
+    </div>
    </div>
 
 </body>
