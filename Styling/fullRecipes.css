@@ -1,5 +1,5 @@
 body {
-    font-family: Arial;
+    font-family: Georgia, 'Times New Roman', Times, serif;
     margin: 0;
     padding: 20px 400px;
 }
@@ -11,15 +11,14 @@ h1 {
 
 
 .dessert_description {
-    
     margin-bottom: 20px;
 }
 
 .dessert_img {
     display: block;
     margin: 20px auto;
-    width: 200px;
-    height: 200px;
+    width: 500px;
+    height: 400px;
     
 }
 

@@ -4,15 +4,20 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Add your recipe</title>
+    <link rel="stylesheet" href="/Styling/add-recipe.css">
+    <link rel="stylesheet" href="/Styling/navbar.css">
+    <script src="/JS/formScript.js"></script>
 </head>
 
 <body>
     <nav class="navigationBar">
-        <a href="index.html">Home</a>
-        <a href="view-recipes.html">View All Recipes</a>
-        <a href="add-recipe.html">Add Recipe</a></li> 
-        <hr>
+        <a class="logo" href="view-recipes.html">DESSERTS</a>
+        <div class="navigation-links">
+            <a href="view-recipes.html">All Recipes</a>
+            <a href="add-recipe.html">Add Recipe</a>
+        </div>
     </nav>
+    <hr>
     <h1>Add Your Recipe</h1>
     
     
@@ -27,13 +32,14 @@
         <input type="text" id="recipeIntructions" name="recipeIntructions">
         
         <label for="recipeDifficulty">Difficulty:</label>
-       
-        <input type="radio" id="easy" name="easyDifficulty" value="easy">
-        <label for="easy">Easy</label>
-        <input type="radio" id="easy" name="easyDifficulty" value="medium">
-        <label for="medium">Medium</label>
-        <input type="radio" id="easy" name="easyDifficulty" value="hard">
-        <label for="hard">Hard</label>
+        <div class="radio-group">
+            <input type="radio" id="easy" name="easyDifficulty" value="easy">
+            <label for="easy">Easy</label>
+            <input type="radio" id="medium" name="mediumDifficulty" value="medium">
+            <label for="medium">Medium</label>
+            <input type="radio" id="hard" name="hardDifficulty" value="hard">
+            <label for="hard">Hard</label>
+        </div>
 
         <input type="submit" value="Submit">
 
