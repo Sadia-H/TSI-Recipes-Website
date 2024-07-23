@@ -8,7 +8,8 @@
     <link rel="stylesheet" href="/Styling/navbar.css">
     <!-- <script src="/JS/formScript.js"></script> -->
    
-     <script>
+
+    <script>
         function validateForm(event) {
             event.preventDefault();
 
@@ -17,8 +18,21 @@
             const recipeInstructions = document.getElementById('recipeInstructions').value;
             const difficulty = document.querySelector('input[name="difficulty"]:checked');
 
-            if (title === "" || ingredients === "" || recipeInstructions === "" || !difficulty) {
-                alert("Please fill out all fields.");
+            if (title === "" || /\d/.test(title) ) {
+                alert("Please enter a valid title.");
+                return;
+            }
+
+            if (ingredients === "") {
+                alert("Please enter the ingredients");
+                return;
+            }
+            if (recipeInstructions === "") {
+                alert("Please enter the instructions.");
+                return;
+            }
+            if (!difficulty) {
+                alert("Please select a difficulty.");
                 return;
             }
 
@@ -29,65 +43,6 @@
             document.getElementById('myForm').addEventListener('submit', validateForm);
         }
     </script>
-
-     <!-- <script>
-        function validateForm(event) {
-            event.preventDefault();
-
-            document.querySelector('.error').forEach(span => span.textContent = '');
-
-            const title = document.getElementById('recipeTitle').value;
-            const ingredients = document.getElementById('recipeIngredients').value;
-            const recipeInstructions = document.getElementById('recipeInstructions').value;
-            const difficulty = document.querySelector('input[name="difficulty"]:checked');
-
-            // if (title === "") {
-            //     alert("Please enter the title.");
-            //     return;
-            // }
-            // if (ingredients === "") {
-            //     alert("Please enter the ingredients.");
-            //     return;
-            // }
-            if (title === "" || ingredients === "" || recipeInstructions === "" || !difficulty) {
-                alert("Please fill out all fields.");
-                return;
-            }
-
-        
-            document.getElementById('myForm').submit();
-        }
-
-        window.onload = function() {
-            document.getElementById('myForm').addEventListener('submit', validateForm);
-        }
-    </script> -->
-
-
-
-<!-- <script>
-    document.getElementById('myForm').addEventListener('submit', function(event) {
-        event.preventDefault();
-
-    
-        document.getElementById('titleError').textContent = '';
-
-      
-        const title = document.getElementById('recipeTitle').value;
-
-        
-        if (title === "") {
-
-            document.getElementById('titleError').textContent = "Please enter the field above";
-        } else {
-            
-            alert('Title is valid!');
-    
-        }
-    });
-</script> -->
-
-
 
 </head>
 
