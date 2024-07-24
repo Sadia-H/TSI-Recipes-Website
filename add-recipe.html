@@ -6,44 +6,7 @@
     <title>Add your recipe</title>
     <link rel="stylesheet" href="/Styling/add-recipe.css">
     <link rel="stylesheet" href="/Styling/navbar.css">
-    <!-- <script src="/JS/formScript.js"></script> -->
-   
-
-    <script>
-        function validateForm(event) {
-            event.preventDefault();
-
-            const title = document.getElementById('recipeTitle').value;
-            const ingredients = document.getElementById('recipeIngredients').value;
-            const recipeInstructions = document.getElementById('recipeInstructions').value;
-            const difficulty = document.querySelector('input[name="difficulty"]:checked');
-
-            if (title === "" || /\d/.test(title) ) {
-                alert("Please enter a valid title.");
-                return;
-            }
-
-            if (ingredients === "") {
-                alert("Please enter the ingredients");
-                return;
-            }
-            if (recipeInstructions === "") {
-                alert("Please enter the instructions.");
-                return;
-            }
-            if (!difficulty) {
-                alert("Please select a difficulty.");
-                return;
-            }
-
-            document.getElementById('myForm').submit();
-        }
-
-        window.onload = function() {
-            document.getElementById('myForm').addEventListener('submit', validateForm);
-        }
-    </script>
-
+    <script src="/JS/formScript.js"></script>
 </head>
 
 <body>
@@ -66,11 +29,24 @@
 
 
         <label for="recipeIngredients">Ingredients:</label>
-        <input type="text" id="recipeIngredients" name="recipeIngredients">
-        
+        <div class="ingredientsList">
+            <div class = fullInput>
+                <input type="text" id="quantityIngredients" name="quantityIngredients">
+                <input type="text" id="recipeIngredients" name="recipeIngredients">
+            </div>
+            <div class = fullInput>
+                <input type="text" id="quantityIngredients" name="quantityIngredients">
+                <input type="text" id="recipeIngredients" name="recipeIngredients">
+            </div>
+        </div>
+
+        <button type="button" id="addIngredient">Add Ingredient</button>
+
+
         <label for="recipeInstructions">Intructions:</label>
-        <input type="text" id="recipeInstructions" name="recipeInstructions">
+        <textarea id="recipeInstructions" name="recipeInstructions"></textarea>
         
+
         <label for="recipeDifficulty">Difficulty:</label>
         <div class="radio-group">
             <input type="radio" id="easy" name="difficulty" value="easy">
